@@ -1,0 +1,52 @@
+div.Contents {
+    position: relative;
+    display: flex;
+    margin: 0px auto;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    justify-content: center;
+    width: var(--ScreenWidth);
+}
+div.MyInvestments {
+    margin-bottom: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 1000px;
+    min-height: 600px;
+    height: auto;
+    text-align: left;
+    background-color: var(--Contents-background);
+}
+h2  {
+    margin-top: 50px;
+}
+p.Asset {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+table.CurrentCoin {
+    margin-bottom: 50px;
+    border-collapse: collapse;
+}
+table {
+    padding-bottom: 50px;
+    width: 100%;
+    height: inherit;
+}
+tr.holdcoin:hover {
+    background-color: #E7E7E7;
+}
+th {
+    height: 20px;
+    text-align: center;
+    border-bottom: 3px solid #5a5a8a;
+}
+td {
+    height: 35px;
+    border-bottom: 1px solid #5b5481;
+    text-align: center;
+}
+tr.tables:hover {
+    background-color: #E7E7E7;
+}

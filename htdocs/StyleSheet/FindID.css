@@ -1,0 +1,44 @@
+div.FindID_Window {
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+    margin-bottom: 550px;
+    padding-top: 100px;
+    width: var(--ScreenWidth);
+}
+div.InputForm {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #B2B2B2;
+}
+#FindID {
+    display: flex;
+    margin-top: 40px;
+    height: 100px;
+    justify-content: center;
+}
+div.FindID {
+    margin: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 280px;
+}
+input {
+    display: block;
+    width: 270px;
+    height: 30px;
+    font-size: 15px;
+}
+#FindIDButton {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #DEE26C;
+}

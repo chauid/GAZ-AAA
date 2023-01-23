@@ -1,0 +1,48 @@
+div.Contents {
+    position: relative;
+    display: flex;
+    margin: 0px auto;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    justify-content: center;
+    width: var(--ScreenWidth);
+}
+div.Myprofile {
+    margin-bottom: 300px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 600px;
+    height: 600px;
+    text-align: left;
+    background-color: var(--Contents-background);
+}
+h2  {
+    margin-top: 50px;
+}
+div.Inform {
+    margin: 0;
+    border: 1px solid #989898;
+    text-align: left;
+}
+p.Inform {
+    margin-left: 20px;
+}
+a.ButtonLink {
+    display: flex;
+    margin: 15px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+button {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    border-radius:10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+div.ButtonArray {
+    display: flex;
+    justify-content: space-between;
+}
