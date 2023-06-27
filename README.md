@@ -1,19 +1,21 @@
-# PHP-Web Server Files
-웹서버 프로그래밍 과제물 문서화 목적 저장소입니다.   
-모든 문서는 PHP 기반으로 작성되었습니다.   
+# GAZ-AAA 웹사이트 프로젝트
+## [Laravel](https://laravel.com/) + [React](https://react.dev/)
+웹 서버 프로그래밍 과제로 제출한 서버입니다.  
 서버 주소 : [**http://34.168.223.254**](http://34.168.223.254)
 
-## 1. 페이지 파일
-> 모든 페이지 파일은 Page 폴더에 있습니다.   
-> 실질적인 서버 파일은 PHP 파일이 있는 [Page](https://github.com/chauid/PHP-Web/tree/main/ServerFiles/Page)와 스타일시트가 있는 [StyleSheet](https://github.com/chauid/PHP-Web/tree/main/ServerFiles/StyleSheet) 로 구성되어있습니다.
+## Not Support SSL!! + No Domain Name.
+도메인 사기 아까워서 SSL도 지원 안 합니다. 이 웹사이트에서 접속하고 개인 정보를 입력하는 것을 지양합니다.  
+**해당 웹 사이트에서 개인정보를 비롯한 어떠한 정보노출 피해에 대하여 보상해주지 않습니다.**
 
-## 2. Backup DB
-> 디버그를 하기 위해 만든 Coin 정보가 있는 DB 생성 스키마 파일입니다.   
-> 실제 서버와 같은 스키마입니다.
+## 무료 서버
+가격은 낮추고 성능은 _**Down!**_  
+해당 웹 사이트는 GCP(Google Cloud Platform)의 무료 서버를 사용하였습니다. 유료서버는 비용이 많이 들기 때문에 서버의 성능을 낮췄습니다._(매우 합리적!)_  
+**본 개발자는 웹 사이트가 급격히 느려지는 현상, 렉을 동반한 서버의 오류로 인해 발생한 정신적인 피해에 대하여 일체 보상하지 않음을 약속합니다.**
 
-## 3. Update Coin DB
-> 서버에 있는 Coins DB의 값을 인위적으로 변동하여 DB에 Update하는 프로그램입니다.   
-> 이 프로그램은 C언어로 작성되었습니다.   
-> 실제 빌드를 리눅스에 하기 때문에 윈도우 환경에서 빌드한 소스코드와 차이가 있습니다.   
-> 윈도우 소스코드 : [Coins.cpp](https://github.com/chauid/PHP-Web/blob/main/ServerFiles/UpdateDB/CoinDB/CoinDB/CoinDB.cpp)   
-> 리눅스 소스코드 : [ForLinux.cpp](https://github.com/chauid/PHP-Web/blob/main/ServerFiles/UpdateDB/CoinDB/CoinDB/ForLinux.cpp)
+## 코인 시세 결정 알고리즘 공개!
+그래프? 사실 그런 거 의미 없습니다. 코인 관련 뉴스 기사 뜨면 투자하세요.  
+시세를 결정하는 로직은 **전부 랜덤입니다.** 약간의 로직이 있긴 합니다.  
+[시세 알고리즘 보기](./CoinDB/CoinDB/CoinDB.cpp)
+
+## License
+This project is licensed under the [MIT License](LICENSE).
