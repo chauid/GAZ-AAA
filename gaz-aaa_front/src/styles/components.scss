@@ -1,0 +1,134 @@
+@use 'styles' as *;
+
+// Google Web Font
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/** Root Style */
+html,
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: $font-size-md;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  min-width: $ScreenWidth;
+
+  .p-component {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: $font-size-base;
+  }
+}
+
+/** Header Style */
+header.Header {
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  @include setSize(Header);
+  z-index: 2;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  color: $HeaderColor;
+  background-color: $Header-background;
+
+  .HeaderNav {
+    display: flex;
+    position: relative;
+    margin-left: 100px;
+    @include setSize(none, 800px, 100%);
+    align-items: center;
+
+    .HeaderLogo {
+      display: flex;
+
+      .LogoImage {
+        width: 200px;
+      }
+    }
+
+    .HeaderContents {
+      position: relative;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .HeaderLink {
+        position: relative;
+        float: right;
+        color: $gray-400;
+        text-decoration: none;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .HeaderLogin {
+    display: flex;
+    margin-right: 100px;
+    width: 500px;
+    height: 100%;
+    align-items: center;
+    color: $white;
+
+    .HeaderLoginBox {
+      margin-right: 20px;
+    }
+
+    .HeaderLoginLink {
+      margin-right: 20px;
+      color: $gray-400;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+/** Footer Style */
+footer.Footer {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  @include setSize(Footer);
+  color: $Footer-color;
+  background-color: $Footer-background;
+
+  div.SiteInfo {
+    padding-top: 5px;
+    margin-left: 200px;
+
+    p.address {
+      margin-top: 20px;
+    }
+  }
+
+  div.FooterContents {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    padding: 10px;
+
+    img.FooterLogo {
+      width: 150px;
+    }
+  }
+}
+
+/** Contents Style */
+div.Contents {
+  display: flex;
+  @include setSize(Content);
+  justify-content: center;
+  align-items: center;
+}

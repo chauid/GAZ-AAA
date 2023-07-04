@@ -1,0 +1,50 @@
+@use 'styles' as *;
+
+div.Registry_Window {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  margin-bottom: 500px;
+  padding-top: 100px;
+
+  .InputForm {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 640px;
+    border: 1px solid #b2b2b2;
+
+    #Registry {
+      display: flex;
+      margin-top: 41px;
+      height: 60px;
+      justify-content: center;
+
+      .Registry {
+        margin: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 380px;
+
+        input {
+          display: block;
+          width: 270px;
+          height: 30px;
+          font-size: 15px;
+        }
+
+        #RegistryButton {
+          margin-top: 99px;
+          border: none;
+          border-radius: 5px;
+          width: 400px;
+          height: 50px;
+          cursor: pointer;
+          font-size: 15px;
+          font-weight: 600;
+          background-color: #dee26c;
+        }
+      }
+    }
+  }
+}

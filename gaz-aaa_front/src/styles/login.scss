@@ -1,0 +1,63 @@
+@use 'styles' as *;
+
+div.Login_Window {
+  .InputForm {
+    width: 400px;
+    height: 500px;
+    border: 1px solid $gray-400;
+
+    .LoginTitle {
+      display: flex;
+      margin-top: 40px;
+      height: 100px;
+      justify-content: center;
+    }
+
+    .LoginForm {
+      margin: 10px;
+      padding-left: 50px;
+      padding-right: 50px;
+      height: 250px;
+
+      label > span {
+        display: block;
+        color: $text-color-secondary;
+      }
+
+      input {
+        margin-top: 10px;
+        display: block;
+        width: 270px;
+        height: 35px;
+        font-size: 15px;
+      }
+    }
+
+    .HelpBar {
+      margin: 20px;
+      color: #1f2367;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: #1f2367;
+        text-decoration: none;
+      }
+    }
+
+    .LoginSubmit {
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      width: 398px;
+      height: 48px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      background-color: #dee26c;
+    }
+  }
+}

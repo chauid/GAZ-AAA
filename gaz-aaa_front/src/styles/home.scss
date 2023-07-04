@@ -1,0 +1,48 @@
+@use 'styles' as *;
+
+/** Home */
+div.HomeContents {
+  position: relative;
+  display: grid;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 800px auto 50px;
+  grid-row-end: 1;
+  column-gap: 50px;
+  margin: 0px auto;
+
+  .grid-item {
+    padding: 20px;
+    background-color: $Contents-background;
+  }
+
+  #close_box {
+    position: relative;
+    float: left;
+    margin: 10px;
+    width: 25px;
+    bottom: -120px;
+    cursor: pointer;
+  }
+
+  #close_again {
+    position: relative;
+    float: left;
+    margin: 10px;
+    bottom: -120px;
+  }
+
+  #close {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    width: 20px;
+    cursor: pointer;
+    float: right;
+    bottom: -120px;
+  }
+
+  div.CointableTitle {
+    display: flex;
+    justify-content: center;
+  }
+}
