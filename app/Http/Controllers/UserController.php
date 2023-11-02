@@ -26,7 +26,7 @@ class UserController extends Controller
     // $out->writeln($auth);
     // $user = Users::where('userID', $request['userID'])->first();
     // $out->write($request);
-    return response(array('data' => $request->session()->all()), Response::HTTP_OK);
+    return response(array('data' => 'ok'), Response::HTTP_OK);
     // return response($credentials, Response::HTTP_NOT_FOUND);
 
     // if (empty($user)) {

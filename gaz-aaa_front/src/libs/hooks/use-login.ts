@@ -1,25 +1,36 @@
 import { useForm } from 'react-hook-form';
 
+import useMutation from '@libs/use-mutation';
+
 export interface ILoginPostData {
   ID: string;
   PW: string;
 }
 
 export default function useLogin(toast: any) {
-  const loginForm = useForm<ILoginPostData>();
+  const apiURL = `${import.meta.env.VITE_API_URL}/v1/login`;
+  const { register, setValue, getValues, handleSubmit } = useForm<ILoginPostData>();
+  const [mutation, { data, loading, error }] = useMutation<ILoginPostData>(apiURL);
 
-  // 로그인 요청을 보내보자
+  async function onValid(form: ILoginPostData) {
+    mutation(form);
 
-  function onValid(from: ILoginPostData) {
-    toast.current.show({ severity: 'success', summary: 'Form Submitted', detail: loginForm.getValues('PW') });
+    // if (loading) {
+    //   return;
+    // }
+
+    console.log(error);
+    await toast.current.show({ severity: 'success', summary: '로그인...', detail: error });
   }
 
   function onInvalid() {
-    toast.current.show({ severity: 'warn', summary: 'Form Submitted', detail: loginForm.getValues('PW') });
+    toast.current.show({ severity: 'warn', summary: '로그인 오류', detail: '아이디와 비밀번호를 확인해주세요' });
   }
 
   return {
-    loginForm,
-    handleSubmit: loginForm.handleSubmit(onValid, onInvalid),
+    register,
+    setValue,
+    getValues,
+    handleSubmit: handleSubmit(onValid, onInvalid),
   };
 }
