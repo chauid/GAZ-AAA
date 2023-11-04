@@ -1,4 +1,6 @@
 # GAZ-AAA Project
+이 프로젝트는 중단되었습니다.  
+This Project is deprecated.
 
 ## Frontend : [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://ko.vitejs.dev/)
 
