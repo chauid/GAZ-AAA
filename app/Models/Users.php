@@ -41,11 +41,12 @@ class Users extends Authenticatable
   protected $table = 'users';
   protected $primaryKey = 'userID';
 
-  public $timestamps = false;
+  public $timestamps = true;
 
   protected $fillable = [
     'userID',
     'password',
+    'email',
     'userName',
     'nickName',
     'phone',
@@ -65,7 +66,8 @@ class Users extends Authenticatable
 
   protected $casts = [
     'userID' => 'string',
-    'password' => 'encrypted',
+    'password' => 'hashed',
+    'email' => 'string',
     'userName' => 'string',
     'nickName' => 'string',
     'phone' => 'string',
@@ -74,7 +76,7 @@ class Users extends Authenticatable
     'profit' => 'number',
     'loss' => 'number',
     'userTag' => 'string',
-    'created_at' => 'timestamp',
-    'updated_at' => 'timestamp',
+    'created_at' => 'date',
+    'updated_at' => 'date',
   ];
 }

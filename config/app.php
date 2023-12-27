@@ -169,6 +169,7 @@ return [
     App\Providers\EventServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
   ])->toArray(),
 
   /*

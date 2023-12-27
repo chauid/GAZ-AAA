@@ -245,6 +245,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUsertagid($value)
  * @mixin \Eloquent
+ * @property string $email 사용자 이메일
+ * @method static \Illuminate\Database\Eloquent\Builder|Users whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Users whereNickName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Users whereUserID($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Users whereUserName($value)

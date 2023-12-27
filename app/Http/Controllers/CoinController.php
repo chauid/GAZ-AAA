@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Coins;
 use App\Models\CoinsHistory;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use \Symfony\Component\Console\Output\ConsoleOutput;
@@ -16,16 +17,18 @@ class CoinController extends Controller
 {
 
   /** 코인명, 가격 */
-  public function getMinCoinInfo(Request $request): Response
+  public function getMinCoinInfo(Request $request): JsonResponse
   {
     $out = new ConsoleOutput();
     $coinList = Coins::select('coinName', 'coinSymbol', 'price')->get();
-    return response(
-      $content = array(
-        'message' => 'ok',
-        'coinlist' => $coinList,
-      ),
-      $status = count($coinList) > 0 ? Response::HTTP_OK : Response::HTTP_NOT_FOUND
+    return response()->json(
+      [
+        $content = array(
+          'message' => 'ok',
+          'coinlist' => $coinList,
+        ),
+        $status = count($coinList) > 0 ? Response::HTTP_OK : Response::HTTP_NOT_FOUND
+      ]
     );
   }
 

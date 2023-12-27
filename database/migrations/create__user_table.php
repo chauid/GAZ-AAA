@@ -14,6 +14,7 @@ return new class extends Migration
     Schema::create('users', function (Blueprint $table) {
       $table->string('userID', 30)->primary()->comment('사용자ID');
       $table->char('password', 70)->comment('사용자 비밀번호');
+      $table->string('email', 255)->comment('사용자 이메일');
       $table->string('userName', 50)->comment('사용자 이름');
       $table->string('nickName', 50)->unique()->comment('사용자 별명');
       $table->char('phone', 11)->comment('전화번호');

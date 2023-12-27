@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CoinController;
+use App\Http\Controllers\JWTAuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -25,7 +26,11 @@ Route::get('/', function () {
 });
 
 // v1 API
-Route::prefix('/v1')->group(function () {
+Route::prefix('/v1')->group([
+  'middleware' => 'api',
+  'namespace' => 'App\Http\Controllers',
+  'prefix' => 'auth'
+], function () {
   Route::get('/', function () {
     $ses = session()->get('id');
     $data = array(
@@ -40,8 +45,8 @@ Route::prefix('/v1')->group(function () {
   Route::get('/getcomments', [CoinController::class, 'getComments']);
 
   // 로그인
-  Route::post('/login', [UserController::class, 'login']);
-  Route::post('/register', [UserController::class, 'register']);
+  Route::post('/login', [JWTAuthController::class, 'login']);
+  Route::post('/register', [JWTAuthController::class, 'register']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
